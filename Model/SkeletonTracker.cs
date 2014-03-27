@@ -90,104 +90,104 @@ namespace Model
                 switch (joint.JointType)
                 {
                     case JointType.AnkleLeft:
-                        body.ankleLeft.x = joint.Position.X;
-                        body.ankleLeft.y = joint.Position.Y;
-                        body.ankleLeft.z = joint.Position.Z;
+                        body.AnkleLeft.X = joint.Position.X;
+                        body.AnkleLeft.Y = joint.Position.Y;
+                        body.AnkleLeft.Z = joint.Position.Z;
                         break;
                     case JointType.AnkleRight:
-                        body.ankleRight.x = joint.Position.X;
-                        body.ankleRight.y = joint.Position.Y;
-                        body.ankleRight.z = joint.Position.Z;
+                        body.AnkleRight.X = joint.Position.X;
+                        body.AnkleRight.Y = joint.Position.Y;
+                        body.AnkleRight.Z = joint.Position.Z;
                         break;
                     case JointType.ElbowLeft:
-                        body.elbowLeft.x = joint.Position.X;
-                        body.elbowLeft.y = joint.Position.Y;
-                        body.elbowLeft.z = joint.Position.Z;
+                        body.ElbowLeft.X = joint.Position.X;
+                        body.ElbowLeft.Y = joint.Position.Y;
+                        body.ElbowLeft.Z = joint.Position.Z;
                         break;
                     case JointType.ElbowRight:
-                        body.elbowRight.x = joint.Position.X;
-                        body.elbowRight.y = joint.Position.Y;
-                        body.elbowRight.z = joint.Position.Z;
+                        body.ElbowRight.X = joint.Position.X;
+                        body.ElbowRight.Y = joint.Position.Y;
+                        body.ElbowRight.Z = joint.Position.Z;
                         break;
                     case JointType.FootLeft:
-                        body.footLeft.x = joint.Position.X;
-                        body.footLeft.y = joint.Position.Y;
-                        body.footLeft.z = joint.Position.Z;
+                        body.FootLeft.X = joint.Position.X;
+                        body.FootLeft.Y = joint.Position.Y;
+                        body.FootLeft.Z = joint.Position.Z;
                         break;
                     case JointType.FootRight:
-                        body.footRight.x = joint.Position.X;
-                        body.footRight.y = joint.Position.Y;
-                        body.footRight.z = joint.Position.Z;
+                        body.FootRight.X = joint.Position.X;
+                        body.FootRight.Y = joint.Position.Y;
+                        body.FootRight.Z = joint.Position.Z;
                         break;
                     case JointType.HandRight:
-                        body.handRight.x = joint.Position.X;
-                        body.handRight.y = joint.Position.Y;
-                        body.handRight.z = joint.Position.Z;
+                        body.HandRight.X = joint.Position.X;
+                        body.HandRight.Y = joint.Position.Y;
+                        body.HandRight.Z = joint.Position.Z;
                         break;
                     case JointType.HandLeft:
-                        body.handLeft.x = joint.Position.X;
-                        body.handLeft.y = joint.Position.Y;
-                        body.handLeft.z = joint.Position.Z;
+                        body.HandLeft.X = joint.Position.X;
+                        body.HandLeft.Y = joint.Position.Y;
+                        body.HandLeft.Z = joint.Position.Z;
                         break;
                     case JointType.Head:
-                        body.head.x = joint.Position.X;
-                        body.head.y = joint.Position.Y;
-                        body.head.z = joint.Position.Z;
+                        body.Head.X = joint.Position.X;
+                        body.Head.Y = joint.Position.Y;
+                        body.Head.Z = joint.Position.Z;
                         break;
                     case JointType.HipCenter:
-                        body.hipCenter.x = joint.Position.X;
-                        body.hipCenter.y = joint.Position.Y;
-                        body.hipCenter.z = joint.Position.Z;
+                        body.HipCenter.X = joint.Position.X;
+                        body.HipCenter.Y = joint.Position.Y;
+                        body.HipCenter.Z = joint.Position.Z;
                         break;
                     case JointType.HipLeft:
-                        body.hipLeft.x = joint.Position.X;
-                        body.hipLeft.y = joint.Position.Y;
-                        body.hipLeft.z = joint.Position.Z;
+                        body.HipLeft.X = joint.Position.X;
+                        body.HipLeft.Y = joint.Position.Y;
+                        body.HipLeft.Z = joint.Position.Z;
                         break;
                     case JointType.HipRight:
-                        body.hipRight.x = joint.Position.X;
-                        body.hipRight.y = joint.Position.Y;
-                        body.hipRight.z = joint.Position.Z;
+                        body.HipRight.X = joint.Position.X;
+                        body.HipRight.Y = joint.Position.Y;
+                        body.HipRight.Z = joint.Position.Z;
                         break;
                     case JointType.KneeLeft:
-                        body.kneeLeft.x = joint.Position.X;
-                        body.kneeLeft.y = joint.Position.Y;
-                        body.kneeLeft.z = joint.Position.Z;
+                        body.KneeLeft.X = joint.Position.X;
+                        body.KneeLeft.Y = joint.Position.Y;
+                        body.KneeLeft.Z = joint.Position.Z;
                         break;
                     case JointType.KneeRight:
-                        body.kneeRight.x = joint.Position.X;
-                        body.kneeRight.y = joint.Position.Y;
-                        body.kneeRight.z = joint.Position.Z;
+                        body.KneeRight.X = joint.Position.X;
+                        body.KneeRight.Y = joint.Position.Y;
+                        body.KneeRight.Z = joint.Position.Z;
                         break;
                     case JointType.ShoulderCenter:
-                        body.shoulderCenter.x = joint.Position.X;
-                        body.shoulderCenter.y = joint.Position.Y;
-                        body.shoulderCenter.z = joint.Position.Z;
+                        body.ShoulderCenter.X = joint.Position.X;
+                        body.ShoulderCenter.Y = joint.Position.Y;
+                        body.ShoulderCenter.Z = joint.Position.Z;
                         break;
                     case JointType.ShoulderLeft:
-                        body.shoulderLeft.x = joint.Position.X;
-                        body.shoulderLeft.y = joint.Position.Y;
-                        body.shoulderLeft.z = joint.Position.Z;
+                        body.ShoulderLeft.X = joint.Position.X;
+                        body.ShoulderLeft.Y = joint.Position.Y;
+                        body.ShoulderLeft.Z = joint.Position.Z;
                         break;
                     case JointType.ShoulderRight:
-                        body.shoulderRight.x = joint.Position.X;
-                        body.shoulderRight.y = joint.Position.Y;
-                        body.shoulderRight.z = joint.Position.Z;
+                        body.ShoulderRight.X = joint.Position.X;
+                        body.ShoulderRight.Y = joint.Position.Y;
+                        body.ShoulderRight.Z = joint.Position.Z;
                         break;
                     case JointType.Spine:
-                        body.spine.x = joint.Position.X;
-                        body.spine.y = joint.Position.Y;
-                        body.spine.z = joint.Position.Z;
+                        body.Spine.X = joint.Position.X;
+                        body.Spine.Y = joint.Position.Y;
+                        body.Spine.Z = joint.Position.Z;
                         break;
                     case JointType.WristLeft:
-                        body.wristLeft.x = joint.Position.X;
-                        body.wristLeft.y = joint.Position.Y;
-                        body.wristLeft.z = joint.Position.Z;
+                        body.WristLeft.X = joint.Position.X;
+                        body.WristLeft.Y = joint.Position.Y;
+                        body.WristLeft.Z = joint.Position.Z;
                         break;
                     case JointType.WristRight:
-                        body.wristRight.x = joint.Position.X;
-                        body.wristRight.y = joint.Position.Y;
-                        body.wristRight.z = joint.Position.Z;
+                        body.WristRight.X = joint.Position.X;
+                        body.WristRight.Y = joint.Position.Y;
+                        body.WristRight.Z = joint.Position.Z;
                         break;
                 }
             }

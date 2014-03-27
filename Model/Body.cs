@@ -12,71 +12,71 @@ namespace Model
         private static Body instance;
         
         /// <summary>Koordinatenobjekt des Punktes: Fussgelenk links</summary>
-        public Position ankleLeft { get; set; }
+        public Position AnkleLeft { get; set; }
         /// <summary>Koordinatenobjekt des Punktes: Fussgelenk rechts</summary>
-        public Position ankleRight { get; set; }
+        public Position AnkleRight { get; set; }
         /// <summary>Koordinatenobjekt des Punktes: Ellenbogen links</summary>
-        public Position elbowLeft { get; set; }
+        public Position ElbowLeft { get; set; }
         /// <summary>Koordinatenobjekt des Punktes: Ellenbogen rechts</summary>
-        public Position elbowRight { get; set; }
+        public Position ElbowRight { get; set; }
         /// <summary>Koordinatenobjekt des Punktes: Fuss links</summary>
-        public Position footLeft { get; set; }
+        public Position FootLeft { get; set; }
         /// <summary>Koordinatenobjekt des Punktes: Fuss rechts</summary>
-        public Position footRight { get; set; }
+        public Position FootRight { get; set; }
         /// <summary>Koordinatenobjekt des Punktes: Hand links</summary>
-        public Position handLeft { get; set; }
+        public Position HandLeft { get; set; }
         /// <summary>Koordinatenobjekt des Punktes: Hand rechts</summary>
-        public Position handRight { get; set; }
+        public Position HandRight { get; set; }
         /// <summary>Koordinatenobjekt des Punktes: Kopf</summary>
-        public Position head { get; set; }
+        public Position Head { get; set; }
         /// <summary>Koordinatenobjekt des Punktes: Hüfte mitte</summary>
-        public Position hipCenter { get; set; }
+        public Position HipCenter { get; set; }
         /// <summary>Koordinatenobjekt des Punktes: Hüfte links</summary>
-        public Position hipLeft { get; set; }
+        public Position HipLeft { get; set; }
         /// <summary>Koordinatenobjekt des Punktes: Hüfte rechts</summary>
-        public Position hipRight { get; set; }
+        public Position HipRight { get; set; }
         /// <summary>Koordinatenobjekt des Punktes: Knie links</summary>
-        public Position kneeLeft { get; set; }
+        public Position KneeLeft { get; set; }
         /// <summary>Koordinatenobjekt des Punktes: Knie rechts</summary>
-        public Position kneeRight { get; set; }
+        public Position KneeRight { get; set; }
         /// <summary>Koordinatenobjekt des Punktes: Schulter mitte</summary>
-        public Position shoulderCenter { get; set; }
+        public Position ShoulderCenter { get; set; }
         /// <summary>Koordinatenobjekt des Punktes: Schulter links</summary>
-        public Position shoulderLeft { get; set; }
+        public Position ShoulderLeft { get; set; }
         /// <summary>Koordinatenobjekt des Punktes: Schulter rechts</summary>
-        public Position shoulderRight { get; set; }
+        public Position ShoulderRight { get; set; }
         /// <summary>Koordinatenobjekt des Punktes: Rückgrat</summary>
-        public Position spine { get; set; }
+        public Position Spine { get; set; }
         /// <summary>Koordinatenobjekt des Punktes: Handgelenk links</summary>
-        public Position wristLeft { get; set; }
+        public Position WristLeft { get; set; }
         /// <summary>Koordinatenobjekt des Punktes: Handgelenk rechts</summary>
-        public Position wristRight { get; set; }
+        public Position WristRight { get; set; }
 
         /// <summary>
         /// Konstruktor, Initialisiert die Körperpunkte
         /// </summary>
         private Body()
         {
-            ankleLeft = new Position();
-            ankleRight = new Position();
-            elbowLeft = new Position();
-            elbowRight = new Position();
-            footLeft = new Position();
-            footRight = new Position();
-            handLeft = new Position();
-            handRight = new Position();
-            head = new Position();
-            hipCenter = new Position();
-            hipLeft = new Position();
-            hipRight = new Position();
-            kneeLeft = new Position();
-            kneeRight = new Position();
-            shoulderCenter = new Position();
-            shoulderLeft = new Position();
-            shoulderRight = new Position();
-            spine = new Position();
-            wristLeft = new Position();
-            wristRight = new Position();
+            AnkleLeft = new Position();
+            AnkleRight = new Position();
+            ElbowLeft = new Position();
+            ElbowRight = new Position();
+            FootLeft = new Position();
+            FootRight = new Position();
+            HandLeft = new Position();
+            HandRight = new Position();
+            Head = new Position();
+            HipCenter = new Position();
+            HipLeft = new Position();
+            HipRight = new Position();
+            KneeLeft = new Position();
+            KneeRight = new Position();
+            ShoulderCenter = new Position();
+            ShoulderLeft = new Position();
+            ShoulderRight = new Position();
+            Spine = new Position();
+            WristLeft = new Position();
+            WristRight = new Position();
         }
 
         /// <summary>
@@ -95,6 +95,98 @@ namespace Model
             }
         }
 
-        
+        public void ZModifikator(float mod){
+            if (mod >= 0)
+            {
+                AnkleLeft.Z += mod;
+                AnkleRight.Z += mod;
+                ElbowLeft.Z += mod;
+                ElbowRight.Z += mod;
+                FootLeft.Z += mod;
+                FootRight.Z += mod;
+                HandLeft.Z += mod;
+                HandRight.Z += mod;
+                Head.Z += mod;
+                HipCenter.Z += mod;
+                HipLeft.Z += mod;
+                HipRight.Z += mod;
+                KneeLeft.Z += mod;
+                KneeRight.Z += mod;
+                ShoulderCenter.Z += mod;
+                ShoulderLeft.Z += mod;
+                ShoulderRight.Z += mod;
+                Spine.Z += mod;
+                WristLeft.Z += mod;
+                WristRight.Z += mod;
+            }
+            else
+            {
+                AnkleLeft.Z -= mod;
+                AnkleRight.Z -= mod;
+                ElbowLeft.Z -= mod;
+                ElbowRight.Z -= mod;
+                FootLeft.Z -= mod;
+                FootRight.Z -= mod;
+                HandLeft.Z -= mod;
+                HandRight.Z -= mod;
+                Head.Z -= mod;
+                HipCenter.Z -= mod;
+                HipLeft.Z -= mod;
+                HipRight.Z -= mod;
+                KneeLeft.Z -= mod;
+                KneeRight.Z -= mod;
+                ShoulderCenter.Z -= mod;
+                ShoulderLeft.Z -= mod;
+                ShoulderRight.Z -= mod;
+                Spine.Z -= mod;
+                WristLeft.Z -= mod;
+                WristRight.Z -= mod;
+            }
+        }
+
+        public void Scale(float scale)
+        {
+            AnkleLeft.X *= scale;
+            AnkleRight.X *= scale;
+            ElbowLeft.X *= scale;
+            ElbowRight.X *= scale;
+            FootLeft.X *= scale;
+            FootRight.X *= scale;
+            HandLeft.X *= scale;
+            HandRight.X *= scale;
+            Head.X *= scale;
+            HipCenter.X *= scale;
+            HipLeft.X *= scale;
+            HipRight.X *= scale;
+            KneeLeft.X *= scale;
+            KneeRight.X *= scale;
+            ShoulderCenter.X *= scale;
+            ShoulderLeft.X *= scale;
+            ShoulderRight.X *= scale;
+            Spine.X *= scale;
+            WristLeft.X *= scale;
+            WristRight.X *= scale;
+
+            AnkleLeft.Y *= scale;
+            AnkleRight.Y *= scale;
+            ElbowLeft.Y *= scale;
+            ElbowRight.Y *= scale;
+            FootLeft.Y *= scale;
+            FootRight.Y *= scale;
+            HandLeft.Y *= scale;
+            HandRight.Y *= scale;
+            Head.Y *= scale;
+            HipCenter.Y *= scale;
+            HipLeft.Y *= scale;
+            HipRight.Y *= scale;
+            KneeLeft.Y *= scale;
+            KneeRight.Y *= scale;
+            ShoulderCenter.Y *= scale;
+            ShoulderLeft.Y *= scale;
+            ShoulderRight.Y *= scale;
+            Spine.Y *= scale;
+            WristLeft.Y *= scale;
+            WristRight.Y *= scale;
+        }
     }
 }

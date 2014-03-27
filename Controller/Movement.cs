@@ -63,24 +63,24 @@ namespace Controller
         public Movement()
         {
             // Sensor starten
-            start();
+            Start();
         }
 
         /// <summary>
         /// Sensor starten
         /// </summary>
-        public void start()
+        public void Start()
         {
             sensor = new SkeletonTracker();
             sensor.Start();
-            sensor.SkeletonEvent += new SkeletonTrackerEvent(getEvent);
+            sensor.SkeletonEvent += new SkeletonTrackerEvent(GetEvent);
             body = Body.Instance;
         }
 
         /// <summary>
         /// Punkte und Linien für einen Körpder erstellen
         /// </summary>
-        private void initialize()
+        private void Initialize()
         {
             pointFootLeft = Visualization.addPoint();
             pointFootRight = Visualization.addPoint();
@@ -107,28 +107,31 @@ namespace Controller
         /// <summary>
         /// Punkte und Linien neu setzen und ausgabe neu Zeichnen
         /// </summary>
-        public void update()
+        public void Update()
         {
-            Visualization.updatePoint(pointFootLeft, body.footLeft.x, body.footLeft.y, body.footLeft.z * -1 + 7);
-            Visualization.updatePoint(pointFootRight, body.footRight.x, body.footRight.y, body.footRight.z * -1 + 7);
-            Visualization.updatePoint(pointHandLeft, body.handLeft.x, body.handLeft.y, body.handLeft.z * -1 + 7);
-            Visualization.updatePoint(pointHandRight, body.handRight.x, body.handRight.y, body.handRight.z * -1 + 7);
-            Visualization.updatePoint(pointHead, body.head.x, body.head.y, body.head.z * -1 + 7);
+            body.ZModifikator(body.Spine.Z);
+            body.Scale(3);
+            
+            Visualization.updatePoint(pointFootLeft, body.FootLeft.X, body.FootLeft.Y, body.FootLeft.Z * -1);
+            Visualization.updatePoint(pointFootRight, body.FootRight.X, body.FootRight.Y, body.FootRight.Z * -1);
+            Visualization.updatePoint(pointHandLeft, body.HandLeft.X, body.HandLeft.Y, body.HandLeft.Z * -1);
+            Visualization.updatePoint(pointHandRight, body.HandRight.X, body.HandRight.Y, body.HandRight.Z * -1);
+            Visualization.updatePoint(pointHead, body.Head.X, body.Head.Y, body.Head.Z * -1);
 
-            Visualization.updateLine(lineForearmLeft, body.wristLeft.x, body.wristLeft.y, body.wristLeft.z * -1 + 7, body.elbowLeft.x, body.elbowLeft.y, body.elbowLeft.z * -1 + 7);
-            Visualization.updateLine(lineForearmRight, body.wristRight.x, body.wristRight.y, body.wristRight.z * -1 + 7, body.elbowRight.x, body.elbowRight.y, body.elbowRight.z * -1 + 7);
-            Visualization.updateLine(lineUpperarmLeft, body.elbowLeft.x, body.elbowLeft.y, body.elbowLeft.z * -1 + 7, body.shoulderLeft.x, body.shoulderLeft.y, body.shoulderLeft.z * -1 + 7);
-            Visualization.updateLine(lineUpperarmRight, body.elbowRight.x, body.elbowRight.y, body.elbowRight.z * -1 + 7, body.shoulderRight.x, body.shoulderRight.y, body.shoulderRight.z * -1 + 7);
-            Visualization.updateLine(lineLowerlegLeft, body.ankleLeft.x, body.ankleLeft.y, body.ankleLeft.z * -1 + 7, body.kneeLeft.x, body.kneeLeft.y, body.kneeLeft.z * -1 + 7);
-            Visualization.updateLine(lineLowerlegRight, body.ankleRight.x, body.ankleRight.y, body.ankleRight.z * -1 + 7, body.kneeRight.x, body.kneeRight.y, body.kneeRight.z * -1 + 7);
-            Visualization.updateLine(lineThighLeft, body.kneeLeft.x, body.kneeLeft.y, body.kneeLeft.z * -1 + 7, body.hipLeft.x, body.hipLeft.y, body.hipLeft.z * -1 + 7);
-            Visualization.updateLine(lineThighRight, body.kneeRight.x, body.kneeRight.y, body.kneeRight.z * -1 + 7, body.hipRight.x, body.hipRight.y, body.hipRight.z * -1 + 7);
-            Visualization.updateLine(lineHipLeft, body.hipLeft.x, body.hipLeft.y, body.hipLeft.z * -1 + 7, body.spine.x, body.spine.y, body.spine.z * -1 + 7);
-            Visualization.updateLine(lineHipRight, body.hipRight.x, body.hipRight.y, body.hipRight.z * -1 + 7, body.spine.x, body.spine.y, body.spine.z * -1 + 7);
-            Visualization.updateLine(lineHipCenter, body.hipLeft.x, body.hipLeft.y, body.hipLeft.z * -1 + 7, body.hipRight.x, body.hipRight.y, body.hipRight.z * -1 + 7);
-            Visualization.updateLine(lineBreastLeft, body.shoulderLeft.x, body.shoulderLeft.y, body.shoulderLeft.z * -1 + 7, body.spine.x, body.spine.y, body.spine.z * -1 + 7);
-            Visualization.updateLine(lineBreastRight, body.shoulderRight.x, body.shoulderRight.y, body.shoulderRight.z * -1 + 7, body.spine.x, body.spine.y, body.spine.z * -1 + 7);
-            Visualization.updateLine(lineBreastCenter, body.shoulderLeft.x, body.shoulderLeft.y, body.shoulderLeft.z * -1 + 7, body.shoulderRight.x, body.shoulderRight.y, body.shoulderRight.z * -1 + 7);
+            Visualization.updateLine(lineForearmLeft, body.WristLeft.X, body.WristLeft.Y, body.WristLeft.Z * -1, body.ElbowLeft.X, body.ElbowLeft.Y, body.ElbowLeft.Z * -1);
+            Visualization.updateLine(lineForearmRight, body.WristRight.X, body.WristRight.Y, body.WristRight.Z * -1, body.ElbowRight.X, body.ElbowRight.Y, body.ElbowRight.Z * -1);
+            Visualization.updateLine(lineUpperarmLeft, body.ElbowLeft.X, body.ElbowLeft.Y, body.ElbowLeft.Z * -1, body.ShoulderLeft.X, body.ShoulderLeft.Y, body.ShoulderLeft.Z * -1);
+            Visualization.updateLine(lineUpperarmRight, body.ElbowRight.X, body.ElbowRight.Y, body.ElbowRight.Z * -1, body.ShoulderRight.X, body.ShoulderRight.Y, body.ShoulderRight.Z * -1);
+            Visualization.updateLine(lineLowerlegLeft, body.AnkleLeft.X, body.AnkleLeft.Y, body.AnkleLeft.Z * -1, body.KneeLeft.X, body.KneeLeft.Y, body.KneeLeft.Z * -1);
+            Visualization.updateLine(lineLowerlegRight, body.AnkleRight.X, body.AnkleRight.Y, body.AnkleRight.Z * -1, body.KneeRight.X, body.KneeRight.Y, body.KneeRight.Z * -1);
+            Visualization.updateLine(lineThighLeft, body.KneeLeft.X, body.KneeLeft.Y, body.KneeLeft.Z * -1, body.HipLeft.X, body.HipLeft.Y, body.HipLeft.Z * -1);
+            Visualization.updateLine(lineThighRight, body.KneeRight.X, body.KneeRight.Y, body.KneeRight.Z * -1, body.HipRight.X, body.HipRight.Y, body.HipRight.Z * -1);
+            Visualization.updateLine(lineHipLeft, body.HipLeft.X, body.HipLeft.Y, body.HipLeft.Z * -1, body.Spine.X, body.Spine.Y, body.Spine.Z * -1);
+            Visualization.updateLine(lineHipRight, body.HipRight.X, body.HipRight.Y, body.HipRight.Z * -1, body.Spine.X, body.Spine.Y, body.Spine.Z * -1);
+            Visualization.updateLine(lineHipCenter, body.HipLeft.X, body.HipLeft.Y, body.HipLeft.Z * -1, body.HipRight.X, body.HipRight.Y, body.HipRight.Z * -1);
+            Visualization.updateLine(lineBreastLeft, body.ShoulderLeft.X, body.ShoulderLeft.Y, body.ShoulderLeft.Z * -1, body.Spine.X, body.Spine.Y, body.Spine.Z * -1);
+            Visualization.updateLine(lineBreastRight, body.ShoulderRight.X, body.ShoulderRight.Y, body.ShoulderRight.Z * -1, body.Spine.X, body.Spine.Y, body.Spine.Z * -1);
+            Visualization.updateLine(lineBreastCenter, body.ShoulderLeft.X, body.ShoulderLeft.Y, body.ShoulderLeft.Z * -1, body.ShoulderRight.X, body.ShoulderRight.Y, body.ShoulderRight.Z * -1);
 
             Visualization.draw();
         }
@@ -136,24 +139,20 @@ namespace Controller
         /// <summary>
         /// Ausgabe und Sensor sauber Beenden
         /// </summary>
-        public void end()
+        public void End()
         {
             Visualization.close();
             sensor.Stop();
         }
 
-        public void getEvent()
+        public void GetEvent()
         {
             if (init == 0)
             {
-                initialize();
+                Initialize();
                 init = 1;
             }
-            update();
-            if (body.handRight.x >= 0.5 & body.handRight.y >= 0.5 & body.handLeft.x >= 0.5 & body.handLeft.y >= 0.5)
-            {
-                end();
-            }
+            Update();
         }
     }
 }

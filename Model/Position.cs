@@ -11,14 +11,14 @@ namespace Model
         /// <summary>
         /// x Koordinate
         /// </summary>
-        public float x { get; set; }
+        public float X { get; set; }
         /// <summary>
         /// y Koordinate
         /// </summary>
-        public float y { get; set; }
+        public float Y { get; set; }
         /// <summary>
         /// z Koordinate
         /// </summary>
-        public float z { get; set; }
+        public float Z { get; set; }
     }
 }
